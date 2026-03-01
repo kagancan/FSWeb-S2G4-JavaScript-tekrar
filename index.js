@@ -135,11 +135,11 @@ console.log(uceBolunenlerinToplami);
 
 // 3d çözümü
 
-const besYuzdenKucukSayilar = sayilar((x) => x.sayilar < 500);
+const besYuzdenKucukSayilar = sayilar.filter((x) => x.sayilar < 500);
 
 // 3e çözümü
 
-/* kodlar buraya */
+const siraliSayilar = [...sayilar].filter((x) => x.sayilar < 500).sort((x, y) => x - y, 0);
 
 // 3f çözümü
 
