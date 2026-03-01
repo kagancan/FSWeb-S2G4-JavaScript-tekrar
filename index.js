@@ -143,7 +143,28 @@ const siraliSayilar = [...sayilar].filter((x) => x.sayilar < 500).sort((x, y) =>
 
 // 3f çözümü
 
-/* kodlar buraya */
+let tekraredensayilar = [];
+let kacKereTekrarEdildi = {};
+
+for (let i = 0; i < sayilar.length; i++) {
+  let x = sayilar[i];
+
+  if (kacKereTekrarEdildi[x]) {
+    kacKereTekrarEdildi[x]++;
+  } else {
+    kacKereTekrarEdildi[x] = 1;
+  }
+}
+
+for (let y in kacKereTekrarEdildi) {
+  if (kacKereTekrarEdildi[y] > 1) {
+    tekraredensayilar.push(
+      `${y} sayısı ${kacKereTekrarEdildi[y]} kere tekrar edilmiştir`
+    );
+  }
+}
+
+console.log(tekraredensayilar);
 
 /*  Bu satırın aşağısındaki kodları lütfen değiştirmeyin  */
 
