@@ -135,7 +135,7 @@ console.log(uceBolunenlerinToplami);
 
 // 3d çözümü
 
-/* kodlar buraya */
+const besYuzdenKucukSayilar = sayilar((x) => x.sayilar < 500);
 
 // 3e çözümü
 
