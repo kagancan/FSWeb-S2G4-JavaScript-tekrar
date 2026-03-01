@@ -130,7 +130,8 @@ const uceTamBolunenler = sayilar.forEach((x) => {
 
 // 3c çözümü:
 
-/* kodlar buraya */
+const uceBolunenlerinToplami = sayilar.reduce((x, y) => x + y.sayilar, 0);
+console.log(uceBolunenlerinToplami);
 
 // 3d çözümü
 
