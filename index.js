@@ -122,7 +122,11 @@ for (let i = 0; i < sayilar.length; i++) {
 
 // 3b çözümü:
 
-/* kodlar buraya */
+const uceTamBolunenler = sayilar.forEach((x) => {
+  if (x % 3 === 0) {
+    uceTamBolunenler.push(x);
+  }
+})
 
 // 3c çözümü:
 
