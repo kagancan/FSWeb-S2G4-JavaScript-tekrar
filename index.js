@@ -93,6 +93,7 @@ console.log(CemberinAlani(15, pi));
 
 /*  (oto test yok) sayilar dizisi içinde kaç adet sayı olduğunu konsola yazdırın */
 
+/*
 let ucetambolunenler,
   enkucuk,
   enbuyuk,
@@ -100,6 +101,7 @@ let ucetambolunenler,
   besyuzdenkucuksayilar,
   siralisayilar,
   tekraredensayilar;
+*/
 
 // 3a çözümü
 
@@ -109,37 +111,39 @@ const enKucuk = sayilarSirali[0];
 const enBuyuk = sayilarSirali[sayilarSirali.length-1];
 */
 
-let enKucuk = sayilar[0];
-let enBuyuk = sayilar[0];
+let enkucuk = sayilar[0];
+let enbuyuk = sayilar[0];
 for (let i = 0; i < sayilar.length; i++) {
-  if (enKucuk < sayilar[i]) {
-    enKucuk = sayilar[i];
+  if (enkucuk > sayilar[i]) {
+    enkucuk = sayilar[i];
   }
-  if (enBuyuk > sayilar[i]) {
-    enBuyuk = sayilar[i];
+  if (enbuyuk < sayilar[i]) {
+    enbuyuk = sayilar[i];
   }
 }
 
 // 3b çözümü:
 
-const uceTamBolunenler = sayilar.forEach((x) => {
+let ucetambolunenler = [];
+
+sayilar.forEach((x) => {
   if (x % 3 === 0) {
-    uceTamBolunenler.push(x);
+    ucetambolunenler.push(x);
   }
-})
+});
 
 // 3c çözümü:
 
-const uceBolunenlerinToplami = sayilar.reduce((x, y) => x + y.sayilar, 0);
-console.log(uceBolunenlerinToplami);
+const ucebolunenlerintoplami = ucetambolunenler.reduce((x, y) => x + y, 0);
+console.log(ucebolunenlerintoplami);
 
 // 3d çözümü
 
-const besYuzdenKucukSayilar = sayilar.filter((x) => x.sayilar < 500);
+const besyuzdenkucuksayilar = sayilar.filter((x) => x < 500);
 
 // 3e çözümü
 
-const siraliSayilar = [...sayilar].filter((x) => x.sayilar < 500).sort((x, y) => x - y, 0);
+const siralisayilar = [...besyuzdenkucuksayilar].sort((x, y) => x - y);
 
 // 3f çözümü
 
