@@ -66,11 +66,13 @@ function CemberinCevresi(r) {
 	4. Hesaplanan çemberin alanı döndürülecektir.
 */
 
-function CemberinAlani(r, pi) {
-  return pi * r ** 2;
+function CemberinAlani(r, p) {
+  return p * r ** 2;
 }
 
 /* (Oto test yok) Yukarıdaki CemberinAlani fonksiyonunu yarıçap = 15 vererek aşağıda çalıştırıp, sonucu konsolda gözlemleyin (console.log)  */
+
+console.log(CemberinAlani(15, pi));
 
 /* 	GÖREV 3:
 	- Sayfanın en üstünde global değişken olarak tanımlanmış bir sayilar dizisi bulunmaktadır. Bu dizi içinde 0 ile 1000 arasında rasgele oluşturulmuş tam sayılar ve ondalıklı sayılar bulunmaktadır. Bu diziyi kullanarak aşağıdakileri uygulayın:
@@ -101,7 +103,22 @@ let ucetambolunenler,
 
 // 3a çözümü
 
-/* kodlar buraya */
+/*
+const sayilarSirali = [...sayilar].sort((x, y) => x - y);
+const enKucuk = sayilarSirali[0];
+const enBuyuk = sayilarSirali[sayilarSirali.length-1];
+*/
+
+let enKucuk = sayilar[0];
+let enBuyuk = sayilar[0];
+for (let i = 0; i < sayilar.length; i++) {
+  if (enKucuk < sayilar[i]) {
+    enKucuk = sayilar[i];
+  }
+  if (enBuyuk > sayilar[i]) {
+    enBuyuk = sayilar[i];
+  }
+}
 
 // 3b çözümü:
 
